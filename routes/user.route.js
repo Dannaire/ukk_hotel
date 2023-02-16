@@ -9,7 +9,7 @@ app.use(express.json())
 const userController =
 require(`../controllers/user.controller`)
 /** create route to get data with method "GET" */
-app.get("/get", userController.getAllUser)
+app.get("/", userController.getAllUser)
 /** create route to add new member using method "POST" */
 app.post("/add", userController.addUser)
 /** create route to find member

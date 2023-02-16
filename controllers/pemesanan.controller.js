@@ -5,7 +5,7 @@ const userModel = require(`../models/index`).user
 const Op = require(`sequelize`).Op
 
 const Sequelize = require("sequelize");
-const sequelize = new Sequelize("hotel", "root", "", {
+const sequelize = new Sequelize("ukk_hotel", "root", "", {
   host: "localhost",
   dialect: "mysql",
 })
@@ -167,7 +167,7 @@ exports.deletePemesanan = async (request, response) => {
         .then(result => {
             return response.json({
                 success: true,
-                message: `Pemesanan's has deleted`
+                message: `Pemesanan telah dihapus`
             })
         })
         .catch(error => {
