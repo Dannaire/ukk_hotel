@@ -6,6 +6,7 @@ const app = express();
 const roomModel = require(`../models/index`).kamar;
 const tipeModel = require(`../models/index`).tipe_kamar;
 const Op = require(`sequelize`).Op;
+const moment = require("moment");
 
 const Sequelize = require("sequelize");
 const sequelize = new Sequelize("ukk_hotel", "root", "", {
