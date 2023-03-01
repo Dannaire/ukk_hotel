@@ -21,7 +21,7 @@ exports.findTipekamar = async (request, response) => {
     let nama_tipe_kamar = request.body.nama_tipe_kamar
     /** call findAll() within where clause and operation
     * to find data based on keyword */
-    let tipekamar = await tipekamarModel.findAll({
+    let tipekamar = await tipe_kamarModel.findOne({
     where: {
     [Op.or]: [
     { nama_tipe_kamar: { [Op.substring]: nama_tipe_kamar } }
@@ -32,7 +32,7 @@ exports.findTipekamar = async (request, response) => {
     })
     return response.json({
         success: true,
-        data: users,
+        data: tipekamar,
         message: `All users have been loaded`
         })
         }

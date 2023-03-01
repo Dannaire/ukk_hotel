@@ -10,6 +10,7 @@ require(`../controllers/tipe.kamar.controller`)
 
 app.get("/get", tipe_kamarController.getAllTipekamar)
 app.post("/add", tipe_kamarController.addTipekamar)
+app.post("/find", tipe_kamarController.findTipekamar)   
 app.put("/update/:id", tipe_kamarController.updateTipekamar)
 app.delete("/delete/:id", tipe_kamarController.deleteTipekamar)
 module.exports = app

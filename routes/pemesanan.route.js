@@ -5,7 +5,7 @@ const pemesananController = require(`../controllers/pemesanan.controller`)
 
 app.get("/", pemesananController.getAllPemesanan)
 app.post("/add", pemesananController.addPemesanan)
-app.post("/find", pemesananController.findPemesanan)
+app.post("/find/:id", pemesananController.findPemesanan)
 app.put("/:id", pemesananController.updatePemesanan)
 app.delete("/:id", pemesananController.deletePemesanan)
 
